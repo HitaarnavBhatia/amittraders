@@ -5,11 +5,12 @@ body {
 }
 
 header {
+  height:80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f1f1f1;
+  background-color: #efefef;
 }
 
 .logo-text {
@@ -25,29 +26,167 @@ header {
 }
 
 
-search-bar {
-  margin: 0 auto;
-  align-items: center;
-  position: relative;
-  justify-content: center;
+
+
+.logo-name{
+  font-size: 30;
+  font-family:fair-prosper;
+  color: #07565f;
+  
 }
 
+.left-section{
+  /* background-color:lightblue; */
+  width:400px;
+  display:flex;
+  align-items:center;
+}
+
+.middle-section{
+  /* background-color:lightpink; */
+  flex:1;
+  margin-left:50px;
+  margin-right:15px;
+  max-width:630px;
+  align-items:center;
+  display:flex;
+  align-items:center;
+  padding-left:1px
+}
+.search-bar{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding-left:10px;
+  flex:1;
+  border-right: none;
+}
 .search-input {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
+  
+  height: 50px;
+  width:350px;
+  padding: 0 10px;
+  padding-left: 10px;
   font-size: 16px;
+  border: 1px solid rgb(189, 185, 185);
+  border-radius: 7px; /* Rounded corners */
+  flex: 1; /* Expand to fill available space */
+  border-right: none;
 }
 
-.search-btn {
-  padding: 10px 20px;
-  background-color: #333;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
+.search-logo-button {
+  height: 50px;
+  margin-left: -10px; /* Add margin for spacing */
+  background-color:rgb(255, 255, 255);
+  border: 1px solid rgb(189, 185, 185);
+  cursor: pointer; /* Change cursor to pointer */
+  border-top-right-radius: 7px; 
+  border-bottom-right-radius: 7px;
+  border-left: none;
+  
+}
+
+.search-logo {
+  height: 30px;
+  margin-top: 0px; /* Adjust margin for vertical centering */
+
+}
+
+
+.right-section{
+  /* background-color:lightblue ; */
+  width:500px;
+  display:flex;
+  align-items:center;
+
+}
+
+.profile-dropdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 10px;
-  cursor: pointer;}
+  margin-right: 5px;
+  
+}
+
+.profile-icon{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hamburger-menu{
+  height:35px;
+  margin-left:25px;
+  margin-right: 20px;;
+}   
+
+
+.brands{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 70px;
+  color:#07565f;
+  text-decoration: underline;        
+  
+}
+
+
+
+/* 
+----------------------------------------------
+buttons our products
+---------------------------------------------- */
+.button-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 50px;
+margin-bottom: 30px; 
+}
+
+.row {
+display: flex;
+justify-content: space-evenly;
+width: 100%;
+
+}
+
+.button {
+background-color: transparent;
+cursor: pointer;
+position: relative;
+width: 18%;
+height: 38px;
+border: 0px solid;
+margin-bottom: 90px; 
+}
+
+.logo {
+width: 90%;
+height: auto;
+}
+
+.button::before {
+
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.1);
+border-radius: 50%;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.button:hover::before {
+opacity: 1;
+}
 
 .category-dropdown {
   position: relative;
@@ -249,24 +388,6 @@ header {
   align-items: center;
   position: relative;
 }
-
-.profile-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.profile-icon {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.profile-icon img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
 
 
 
