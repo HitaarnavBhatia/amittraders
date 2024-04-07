@@ -1,0 +1,448 @@
+<html>
+
+<head>
+    <head>
+        <title>Amit Traders</title>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+      
+    <title>Practise</title>
+</head>
+<style>
+    .body{
+        margin:0;
+    }
+
+    .header{
+        height: 80px;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        background-color: #efefef;
+        
+    }
+
+    .logo-name{
+        font-size: 30;
+        font-family:fair-prosper;
+        color: #07565f;
+        
+    }
+
+    .left-section{
+        /* background-color:lightblue; */
+        width:400px;
+        display:flex;
+        align-items:center;
+    }
+
+    .middle-section{
+        /* background-color:lightpink; */
+        flex:1;
+        margin-left:50px;
+        margin-right:15px;
+        max-width:630px;
+        align-items:center;
+        display:flex;
+        align-items:center;
+        padding-left:1px
+    }
+    .search-bar{
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+        padding-left:10px;
+        flex:1;
+        border-right: none;
+    }
+    .search-input {
+        
+        height: 50px;
+        width:350px;
+        padding: 0 10px;
+        padding-left: 10px;
+        font-size: 16px;
+        border: 1px solid rgb(189, 185, 185);
+        border-radius: 7px; /* Rounded corners */
+        flex: 1; /* Expand to fill available space */
+        border-right: none;
+    }
+
+    .search-logo-button {
+        height: 50px;
+        margin-left: -10px; /* Add margin for spacing */
+        background-color:rgb(255, 255, 255);
+        border: 1px solid rgb(189, 185, 185);
+        cursor: pointer; /* Change cursor to pointer */
+        border-top-right-radius: 7px; 
+        border-bottom-right-radius: 7px;
+        border-left: none;
+        
+    }
+
+    .search-logo {
+        height: 30px;
+        margin-top: 0px; /* Adjust margin for vertical centering */
+
+    }
+    .category-dropdown{
+       
+        flex:1;
+        margin-left:70px;
+        margin-right:35px;
+        align-items:center;
+        display:flex;
+        align-items:center;
+        padding-left:10px
+    }
+
+    .right-section{
+        /* background-color:lightblue ; */
+        width:500px;
+        display:flex;
+        align-items:center;
+
+    }
+
+    .profile-dropdown{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 5px;
+        
+    }
+
+    .profile-icon{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .hamburger-menu{
+        height:35px;
+        margin-left:25px;
+        margin-right: 20px;;
+    }   
+   
+ 
+    .brands{
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 70px;
+        color:#07565f;
+        text-decoration: underline;        
+        
+    }
+   
+
+
+/* 
+----------------------------------------------
+buttons our products
+---------------------------------------------- */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 30px; 
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  
+}
+
+.button {
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  width: 18%;
+  height: 38px;
+  border: 0px solid;
+  margin-bottom: 90px; 
+}
+
+.logo {
+  width: 90%;
+  height: auto;
+}
+
+.button::before {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+</style>
+    
+
+
+
+
+<body >
+      <div class="header" >
+        <div class="left-section">
+            <img class="hamburger-menu" src="/icons/icons/hamburger-menu.png">
+            
+            <span class="logo-text">Amit Traders</span>
+        </div>
+
+        <div class="middle-section">
+           
+                <div class="search-bar">
+                  <!-- <form method="get" id="small-search-box-form" action="/en/search"> -->
+                    <input type="text" class="search-input" id="small-searchterms" autocomplete="off" name="q" placeholder="Search products" aria-label="Search store" data-role="autocomplete" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-owns="small-searchterms_listbox" aria-autocomplete="list">
+                    <button class="search-logo-button">
+                        <img class="search-logo" src="/search.png">
+                    </button>
+                  <!-- </form> -->
+                </div>
+                <nav>
+                  <div class="category-dropdown">
+                    <select id="instant-search-categories">
+                      <option value="0">All Categories</option>
+                  <option value="1">Paints</option>
+                  <option value="2">Baths</option>
+                  <option value="3">Lights</option>
+                </select>
+              </div>
+              </nav>
+           
+                <!-- <input class="search-bar" type="text" placeholder="search">
+            
+            <button class="search-logo-button">
+                <img class="search-logo" src="icons/icons8-search.svg">
+            </button>
+            <button class="voicerecorder-logo-button">
+                <img class="voicerecorder-logo" src="icons/microphone.png">
+            </button> -->
+        </div>
+
+        <div class="right-section">
+            <nav>
+                <ul>
+                  <li><a href="#home" class="header-link">Home</a></li>
+                  <li><a href="#products" class="header-link">Products</a></li>
+                  <li><a href="#aboutus" class="header-link">About</a></li>
+                  <li><a href="#contact" class="header-link">Contact</a></li>
+                  <button id="sign-in-button" class="header-link">Sign In</button>
+              </ul>
+            </nav>
+        </div>
+
+        <!-- Sign-in pop-up box -->
+<!-- Add the sign-in button and sign-in pop-up elements to the header -->
+
+  
+
+
+<!-- Add the sign-in pop-up and blur effect elements -->
+<div id="signin-popup" class="signin-popup">
+  
+    <div class="signin-box">
+      <h2>Sign In</h2>
+      <!-- Sign-in form fields... -->
+      <button id="close-button" class="close-btn">&times;</button>
+    </div>
+</div>
+  
+  <!-- Other HTML code... -->
+  
+  
+
+<div class="profile-dropdown">
+        
+    <div class="profile-icon">
+          <img src="/user.png" alt="Profile Icon">
+    </div>
+        
+    <div class="dropdown-content">
+          <a href="#"><img src="/profile.png" alt="Edit Icon"> Edit Profile</a>
+          <a href="#"><img src="/help.png" alt="Help Icon"> Help and Support</a>
+          <a href="#"><img src="/logout.png" alt="Logout Icon"> Logout</a>
+    </div>
+
+ </div>
+ 
+
+   
+</div>
+
+</header>
+
+
+
+
+<!-- -------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------- -->
+                           <!-- navbar completed -->
+<!-- -------------------------------------------------------------- -->
+<!-- -------------------------------------------------------------- -->
+
+<div class="welcome">Welcome to  Amit Traders</div>
+
+
+<div class="slider">
+    <div class="slide">
+        <img src="/icons/icons/jaquarimg1.webp" alt="Image 1">
+    </div>
+    
+    <div class="slide">
+        <img src="/icons/icons/Jaquar_img2.webp" alt="Image 2">
+    </div>
+    <div class="slide">
+        <img src="/icons/icons/asianpaints_img1.webp" alt="Image 3">
+    </div>
+    <div class="slide">
+        <img src="/icons/icons/Jaquar_img3.webp" alt="Image 4">
+    </div>
+    
+    <div class="slide">
+        <img src="/icons/icons/asian_paintsimg3.webp" alt="Image 5">
+    </div>
+</div>
+<div class="navigation-button">
+    <span class="dot active" onclick="changeSlide(0)"></span>
+    <span class="dot" onclick="changeSlide(1)"></span>
+    <span class="dot" onclick="changeSlide(2)"></span>
+    <span class="dot" onclick="changeSlide(3)"></span>
+    <span class="dot" onclick="changeSlide(4)"></span>
+  </div>
+
+  <div class="brands">
+   Top Brands:
+  </div>
+
+  <div class="button-container">
+    <div class="row">
+      <div class="button">
+        <a href="" id="jaquar">
+          <img src="/icons/icons/jaquar.svg" alt="jaquar" class="logo">
+        </a>
+      </div>
+  
+      <div class="button">
+        <a href="" id="asianpaints">
+          <img src="/icons/icons/asian-paint-logo.webp" alt="asianpaints" class="logo">
+        </a>
+      </div>
+  
+      <div class="button">
+        <a href="" id="crompton">
+          <img src="/icons/icons/crompton1.png" alt="crompton" class="logo">
+        </a>
+      </div>
+  
+      <div class="button">
+        <a href="" id="birla">
+          <img src="/icons/icons/birla-white-logo.webp" alt="birla" class="logo">
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="button" style="background-color:#e2bbbbc9">
+        <a href="" id="astral">
+          <img src="/icons/icons/astral.png" alt="astral" class="logo">
+        </a>
+      </div>
+  
+      <div class="button">
+        <a href="" id="supreme">
+          <img src="/icons/icons/supreme.png" alt="supreme" class="logo">
+        </a>
+      </div>
+  
+      <div class="button">
+        <a href="" id="himgiri">
+          <img src="/icons/icons/himgiri.png" alt="himgiri" class="logo">
+        </a>
+      </div>
+  
+      <div class="button" style="height:50px;">
+        <a href="" id="link">
+          <img src="/icons/icons/link.png" alt="link" class="logo" >
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const slides = document.querySelectorAll('.slide'); // Get all slide elements
+const dots = document.querySelectorAll('.dot'); // Get all dot elements
+let currentIndex = 0; // Initialize current slide index
+let intervalId; // Variable to hold the interval ID
+
+// Function to show a specific slide and update active dot
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none'; // Show or hide slides
+    });
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index); // Toggle active class based on index
+    });
+}
+
+// Function to move to the next slide
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length; // Move to the next slide circularly
+    showSlide(currentIndex); // Show the next slide
+}
+
+// Start automatic slide changing
+function startAutoSlide() {
+    intervalId = setInterval(nextSlide, 3000); // Change slide every 3 seconds (adjust as needed)
+}
+
+// Stop automatic slide changing
+function stopAutoSlide() {
+    clearInterval(intervalId); // Clear the interval
+}
+
+// Add click event listeners to dots for manual slide navigation
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        stopAutoSlide(); // Stop auto slide changing when dot is clicked
+        showSlide(index); // Show the clicked slide
+    });
+});
+
+// Show the initial slide (first slide) and start auto slide changing
+showSlide(0);
+startAutoSlide();
+
+</script>
+</body>
+</html>
