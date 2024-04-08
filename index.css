@@ -1,3 +1,12 @@
+@font-face{
+  font-family: 'MyWebFont';
+  src: url('WebFont.eot');
+  src: url('WebFont.eot?#iefix') format('embedded-opentype'),
+  url('WebFont.woff') format('woff'),
+  url('WebFont.ttf') format('truetype'),
+  url('WebFont.svg#webfont') format('svg');
+  }
+
 body {
   margin: 0;
   padding: 0;
@@ -14,7 +23,7 @@ header {
 }
 
 .logo-text {
-  font-family: "Fair Prosper", Arial, sans-serif;
+  font-family: "MyWebFont", Arial, sans-serif;
   font-size: 42px;
   font-weight: bold;
   color: #07565f;
