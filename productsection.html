@@ -1,0 +1,586 @@
+
+<html lang="en">
+<head>
+    
+    <title>Product Categories</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        .montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400px;
+  font-style: normal;
+}
+
+.header{
+    padding-top: 28px;;
+}
+   .header .hamburger-menu {
+    
+        width: 30px; /* Adjust width of hamburger menu icon */
+        height: auto;
+        color: #ffffff;
+    }
+
+    /* --------------------------------------------
+             cart button 
+    -------------------------------------------- */
+    .cart-icon svg {
+  width: 20%; /* Adjust the width of the SVG icon */
+  height: auto; /* Maintain aspect ratio */
+}
+    .cart-icon {
+  position: absolute;
+  top: 32px; /* Adjust top position as needed */
+  right: 30px; /* Adjust right position as needed */
+  cursor: pointer;
+  z-index: 9999;
+  width: 20%;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+}
+
+        .cart-slide {
+            position: fixed;
+            top: 0;
+            right: -300px; /* Initially hide the cart */
+            width: 300px;
+            height: 100vh;
+            background-color: #fff;
+            z-index: 9998;
+            transition: right 0.3s ease;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+        }
+
+        .cart-slide.open {
+            right: 0; /* Slide in the cart */
+        }
+
+        .close-cart {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .cart-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cart-container.open {
+  transform: translateX(0);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.cart-items {
+  padding: 10px;
+  height: calc(100% - 50px);
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+        .notification {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  transform: translate(50%, -50%); /* Center the notification on the cart icon */
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -----------------x---------------x------------------x-------------- */
+
+    .background-image-container {
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.92; /* Adjust image opacity */
+    transition: opacity 0.3s ease-in-out;
+}
+    .container {
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 400px;
+    padding-top:30px;
+    margin-left:20px;
+    margin-bottom: 20px;;
+    display:flex;
+    justify-content: center;
+    
+    /* Adjust padding-top to include space for header and background image */
+}
+
+    /* -----------------------------------------
+    productt card 
+    ----------------------------------------- */
+    /* * {
+            box-sizing: border-box;
+        } */
+
+        .product-card {
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+      width: calc(22% - 40px); /* 25% width for each card with margins */
+      display: inline-block;
+      margin-right: 20px; /* Space between cards */
+      margin-left: 20px;
+      overflow: hidden; /* Added */
+      
+    }
+
+    .product-image {
+      height: 150px; /* Set a default height for all images */
+      overflow: hidden;
+      
+    }
+
+   
+    .product-image img.product1 {
+      margin-top: 10%;
+      padding-top: 5%;
+      padding-left: 20%;
+      width: 60%;
+      height: auto;
+    }
+
+    .product-image img.product2 {
+      margin-top: -50px;
+      padding-left: 9%;
+      width: 80%;
+      height: auto;
+    }
+
+    .product-image img.product3 {
+      margin-top: -50px;
+      padding-left: 4%;
+      width: 90%;
+      height: auto;
+    }
+    
+    .product-image img.product4 {
+      margin-top: -20px;
+      padding-left: 5%;
+      width: 70%;
+      height: auto;
+    }
+
+    .product-image img.product5 {
+      margin-top: -30px;
+      width: 80%;
+      height: auto;
+    }
+    .product-image img.product6 {
+      margin-top: -30px;
+      padding-left: 4%;
+      width: 80%;
+      height: auto;
+    }
+    .product-image img.product7 {
+      margin-top: -30px;
+      padding-left: 4%;
+      width: 82%;
+      height: auto;
+    }
+    .product-image img.product8 {
+      margin-top: 5px;
+      padding-left: 9%;
+      width: 70%;
+      height: auto;
+    }
+
+
+
+    .product-info {
+      margin-top: 10px; /* Added margin between image and info */
+    }
+
+    .product-image img {
+      transition: transform 0.3s ease;
+    }
+
+    .product-image:hover img {
+      transform: scale(1.2) rotateY(10deg) translate3d(0%, -10px, 100px);
+      z-index: 2;
+    }
+
+ /* ----------------------- */
+    .product-thumbnail {
+  width: 40%;
+  height: 80px;
+  padding-top:10px;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-left: 10px;;
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    background-color: rgb(228, 235, 237);
+    
+}
+.cart-content{
+    margin-top: 20px;
+}
+
+.cart-items-heading {
+    font-size: 24px;
+    text-align: left;
+    padding-left:15px;
+    color:chocolate
+   
+
+}
+.total-cost-button{
+    background-color: #000000;
+    color: white;
+    border: 2px solid #364575;
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+
+/* ----------------------- */
+    .quantity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.quantity-button {
+  width: 25px;
+  height: 25px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+}
+    /* Updated Add to Cart button styles */
+    .add-to-cart-container {
+      background-color: #364575;
+      color: white;
+      border: 2px solid #364575;
+      border-radius: 3px;
+      padding: 10px 20px;
+      text-align: center;
+      position: relative; /* Added */
+      overflow: hidden; /* Added */
+      cursor: pointer; /* Added */
+      z-index: 1; /* Added */
+      transition: background-color 0.5s ease; /* Slower transition */
+    }
+
+    .color-slider {
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      transition: left 0.5s ease;
+      z-index: 0;
+      color:#364575;
+    }
+
+    .add-to-cart-container:hover .color-slider {
+      left: 0; /* Slide to the right on hover */
+      color:#364575;
+    }
+
+    /* Clearfix to handle float */
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+
+    /* Media query for responsiveness */
+    @media (max-width: 768px) {
+      .product-card {
+        width: calc(50% - 20px); /* 50% width for each card with margins */
+      }
+    }
+   
+  </style>
+    
+</head>
+<body ng-app="myApp" ng-controller="productController" class="dark">
+     <!-- Cart Icon -->
+     <div class="cart-icon" onclick="toggleCart()">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+        </svg>
+        <div class="notification">{{ cartCount }}</div>
+    </div>
+
+    <!-- Cart Slide -->
+    <div class="cart-slide" id="cartSlide">
+        <!-- Close Cart Button -->
+        <div class="close-cart" ng-click="toggleCart()">
+            Close [X]
+        </div>
+        <h2 class="cart-items-heading">Cart Items</h2>
+        <!-- Cart Content Here -->
+        <div class="cart-content">
+            <!-- Cart Content Here -->
+            <div ng-repeat="item in cartItems" class="cart-item">
+              <img ng-src="{{ item.imageUrl }}" alt="{{ item.name }}" class="product-thumbnail">
+              <div class="product-details">
+                <div>{{ item.name }}</div>
+                <div>Quantity: {{ item.quantity }}</div>
+                <div>Total: {{ item.totalPrice }}</div>
+              </div>
+            </div>
+          </div>
+          <button class="total-cost-button" ng-click="calculateTotalCost()">Total Cost: {{ totalCost }}</button>
+        <!-- For simplicity, I'm leaving this part empty for you to fill with cart content -->
+    </div>
+
+    <div class="header">
+        <div class="left-section">
+            <img class="hamburger-menu" src="/images/hamburger-menu.png">
+            <span class="logo-text">Amit Traders</span>
+        </div>
+    </div>
+    <div class="background-image-container">
+        <img class="background-image" src="/images/JAQUARWEB6.jpg" alt="JAQUARWEB6">
+    </div>
+    
+    <div class="container">
+        <span>SANITARYWARE</span>    
+    </div>
+    
+    <!-- All Products section -->
+    
+
+        <div class="product-card clearfix" ng-repeat="product in products">
+          <div class="product-image">
+            <img ng-src="{{ product.imageUrl }}" alt="{{ product.name }}" class="product{{$index+1}}">
+          </div>
+          <div class="product-info">
+            <h2>{{ product.name }}</h2>
+            <div class="price">MRP: {{ product.mrp }}</div>
+            <div class="discounted-price">{{ product.discountedPrice }}</div>
+          </div>
+          <div class="add-to-cart-container" ng-click="addToCart(product)" onmouseover="animateBlue(this)" onmouseout="resetBlue(this)">
+            ADD TO CART
+            <div class="color-slider"></div> <!-- Added color slider -->
+          </div>
+        </div>
+      
+        <!-- Include AngularJS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script>
+        
+         // Toggle Cart Slide
+         function toggleCart() {
+            var cartSlide = document.getElementById('cartSlide');
+            cartSlide.classList.toggle('open');
+        }
+
+
+
+          // Define your AngularJS app and controller
+          angular.module('myApp', [])
+        .controller('productController', function($scope) {
+            $scope.products = [
+                {
+                  name: 'Product 1',
+                  imageUrl: 'images/faucetnew.webp',
+                  mrp: '100.00',
+                  discountedPrice: '80.00',
+                  marginTop: '0px' // Adjust this value for product 1
+                },
+                {
+                  name: 'Product 2',
+                  imageUrl: 'images/blackspoutremoved.png',
+                  mrp: '120.00',
+                  discountedPrice: '100.00',
+                  marginTop: '0px' // Adjust this value for product 2
+                },
+                {
+                  name: 'Product 3',
+                  imageUrl: 'images/showerremove.png',
+                  mrp: '80.00',
+                  discountedPrice: '60.00',
+                  marginTop: '0px' // Adjust this value for product 3
+                },
+                {
+                  name: 'Product 4',
+                  imageUrl: 'images/bsainmistureremoved.png',
+                  mrp: '150.00',
+                  discountedPrice: '120.00',
+                  marginTop: '0px' // Adjust this value for product 4
+                },
+                {
+                  name: 'Product 5',
+                  imageUrl: 'images/seat1remove.png',
+                  mrp: '150.00',
+                  discountedPrice: '120.00',
+                  marginTop: '0px' // Adjust this value for product 4
+                },
+                {
+                  name: 'Product 6',
+                  imageUrl: 'images/seat2remove.png',
+                  mrp: '150.00',
+                  discountedPrice: '120.00',
+                  marginTop: '0px' // Adjust this value for product 4
+                },
+                {
+                  name: 'Product 7',
+                  imageUrl: 'images/seat3remove.png',
+                  mrp: '150.00',
+                  discountedPrice: '120.00',
+                  marginTop: '0px' // Adjust this value for product 4
+                },
+                {
+                  name: 'Product 8',
+                  imageUrl: 'images/anglecockremove.png',
+                  mrp: '150.00',
+                  discountedPrice: '120.00',
+                  marginTop: '0px' // Adjust this value for product 4
+                },
+      
+      
+                // Add more products as needed
+              ];
+            
+              $scope.cartItems = [];
+                $scope.cartCount = 0;
+                $scope.totalCost = 0;
+
+                // Function to add product to cart
+                $scope.addToCart = function(product) {
+                    var existingItem = $scope.cartItems.find(item => item.name === product.name);
+                    if (existingItem) {
+                        existingItem.quantity++;
+                        existingItem.totalPrice = existingItem.quantity * existingItem.discountedPrice;
+                    } else {
+                        $scope.cartItems.push({
+                            name: product.name,
+                            imageUrl: product.imageUrl,
+                            quantity: 1,
+                            discountedPrice: product.discountedPrice,
+                            totalPrice: product.discountedPrice
+                        });
+                    }
+                    $scope.cartCount++;
+                    $scope.updateCartCount();
+                    $scope.calculateTotalCost();
+                    $scope.animateBlue(document.querySelector('.cart-icon')); // Animate cart icon
+                };
+
+                // Function to update cart count in UI
+                $scope.updateCartCount = function() {
+                var cartCount = document.querySelector('.notification');
+                cartCount.innerText = $scope.cartCount;
+            };
+
+
+                // Function to calculate total cost
+              
+
+                // Function to toggle cart slide
+                $scope.toggleCart = function() {
+                var cartSlide = document.getElementById('cartSlide');
+                cartSlide.classList.toggle('open');
+            };
+          
+        
+    
+                    // Add your product data and other logic here
+        $scope.calculateTotalCost = function() {
+                    $scope.totalCost = 0; // Reset total cost
+                    $scope.cartItems.forEach(function(item) {
+                        $scope.totalCost += parseFloat(item.totalPrice); // Calculate total cost
+                    });
+                    // Optionally, format the total cost as needed
+                    // $scope.totalCost = $scope.totalCost.toFixed(2);
+                };
+            });
+                // Function to animate color on hover
+                function animateBlue(button) {
+      const slider = button.querySelector('.color-slider');
+      slider.style.left = '100%'; // Slide to the right
+      button.style.backgroundColor = 'white'; // Change background color
+      button.style.color = '#364575'; // Change text color
+    }
+
+    // Function to reset to original color and slider position
+    function resetBlue(button) {
+      const slider = button.querySelector('.color-slider');
+      slider.style.left = '-100%'; // Slide back to the left
+      button.style.backgroundColor = '#364575'; // Original background color
+      button.style.color = 'white'; // Original text color
+    }
+
+                // Add your product data and other logic here
+         
+    </script>
+</body>
+</html>
